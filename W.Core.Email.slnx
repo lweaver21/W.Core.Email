@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/SampleEmailApp/SampleEmailApp.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/W.Core.Email/W.Core.Email.csproj" />
   </Folder>
