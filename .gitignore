@@ -1,0 +1,55 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.vspscc
+*.vssscc
+.builds
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.userprefs
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Test Results
+[Tt]est[Rr]esult*/
+*.trx
+coverage/
+*.coverage
+*.coveragexml
+
+# OS generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Credentials (never commit)
+credentials.json
+client_secret*.json
+token.json
+*.p12
