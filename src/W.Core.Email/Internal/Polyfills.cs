@@ -2,6 +2,31 @@
 
 // Polyfills for C# 11+ features on netstandard2.0
 
+namespace System
+{
+    internal static class ArgumentExceptionPolyfills
+    {
+        public static void ThrowIfNullOrWhiteSpace(string? argument, string? paramName = null)
+        {
+            if (string.IsNullOrWhiteSpace(argument))
+            {
+                throw new ArgumentException("Value cannot be null or whitespace.", paramName);
+            }
+        }
+    }
+
+    internal static class ArgumentNullExceptionPolyfills
+    {
+        public static void ThrowIfNull(object? argument, string? paramName = null)
+        {
+            if (argument is null)
+            {
+                throw new ArgumentNullException(paramName);
+            }
+        }
+    }
+}
+
 namespace System.Runtime.CompilerServices
 {
     [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
