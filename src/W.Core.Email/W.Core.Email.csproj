@@ -19,6 +19,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="W.Core.Email.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Apis.Gmail.v1" Version="1.69.0.3742" />
     <PackageReference Include="MimeKit" Version="4.10.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
