@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
+using W.Core.Email.Services;
 using W.Core.Email.Templating;
 
 namespace W.Core.Email.Configuration;
@@ -39,6 +40,11 @@ public class EmailServiceBuilder
     {
         Services.Configure(configure);
         Services.AddSingleton<IValidateOptions<GmailAuthOptions>, GmailOptionsValidator>();
+
+        // Register Gmail client and email service
+        Services.TryAddSingleton<IGmailClient, GmailClient>();
+        Services.TryAddScoped<IEmailService, EmailService>();
+
         return this;
     }
 
